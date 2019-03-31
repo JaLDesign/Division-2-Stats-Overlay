@@ -1,4 +1,5 @@
 
+
 # Division 2 Stat Overlay
 Using [Tabwire/TheDivisionTab-API](https://github.com/Tabwire/TheDivisionTab-API) a unoffical api for The Division 2 and allows for 
 This overlay will allow for stats like;
@@ -6,12 +7,16 @@ This overlay will allow for stats like;
 - PvE Level
 - DZ Level
 - Gear Score
-- Specializations with Emblem 
+- Specialization's with Emblem 
 - NPC Kills
 - DZ Kills
 
-*These are subject to change at anytime*
-*Please repect Tabwire's API.* 
+Because you can ping off the API it allows for emblems for Specialization's to change dynamically (no needing to reload) although this depends on how quickly the api updates.
+
+
+## Examples in use
+![examples](https://i.imgur.com/aQJy6jr.png)
+Left; My Account | Center: Friends account with different Specialization | Right: Friend with No Skill Score Yet
 ## Requirements
  - You will need a **Web Server** 
 >  **xampp** - Own PC/Server
@@ -23,10 +28,11 @@ This overlay will allow for stats like;
 ## Setup
  **/config/config.json**;
  - Open the config  folder and open **config.json**
-    - Replace **[name]** with your **uplay**|**xbl**|**psn** and change platform  respectively name.
+    - Replace **[name]** with your **uplay**|**xbl**|**psn** username and change **[platform]** with the respective name.
     - Save & move/upload your files to your web server.
 ## Usage
- - Navigate to where ever you placed the file on your web directory
+ - Navigate to where ever you placed the files on your web directory 
+ *Its recommend that you create a new sub directory/folder outside of www/htdocs in the case of this example* **/d2stats**
    **[Server ip]/d2stats** or **localhost/d2stats/**  
 - In OBS create a new Browser Source set the URL like above.
     - Max Width & Height 1920x400
