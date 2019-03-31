@@ -51,7 +51,6 @@
 <div id="pid"></div>	
 <script type="text/javascript"> 
 $(document).ready(function() {
-
   function getpid(){
     $.ajax({
       type: "get",
@@ -59,7 +58,7 @@ $(document).ready(function() {
       cache: false,
       dataType: "json",
       success: function(divtab) {
-        console.log("Hey, I am alive", divtab.results[0].pid);
+        console.log("I see you, Grabbed PID: " + divtab.results[0].pid);
 		$('#pid').data('GetPID', divtab.results[0].pid);
 	  },
 	  complete: function(foundit) {
@@ -127,7 +126,7 @@ $(document).ready(function() {
 
 getpid();
 setInterval(function(){
-    loadstats() // this will run after every 90 seconds
+    loadstats() // this will run after every 60 seconds
 }, 60000);
   });
 // Convert Seconds to H:M:S
@@ -138,6 +137,22 @@ function secondsTimeSpanToHMS(s) {
     s -= m*60;
     return h + " Hours"; //Return Hours
 }
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};	
+var username = getUrlParameter('username');
+var platform = getUrlParameter('platform');	
   	</script>	
 	
 	

@@ -1,4 +1,4 @@
 // Uplay/PSN/XBL Username
-var username = "[username]"
+var username = ""
 //Platform [uplay/xbl/psn]
-var platform = "[platform]"
+var platform = ""
