@@ -3,6 +3,8 @@
 **[Setup](#setup) | [Usage](#usage) | [Licence](#licence)**
 
 
+**[JaLP_ Twitter](https://twitter.com/jalp_) | [JaLP Twitch](https://twitch.tv/jalp)** *...Shameless Plug*
+
 Using [@Tabwire](https://github.com/Tabwire/TheDivisionTab-API) TheDivisionTab API a unoffical api for The Division 2 and allows for;
 
 > - Total Time
