@@ -1,0 +1,133 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="/config/config.json"></script>
+</head>
+<body>
+	  
+	  
+<div class="container" style="overflow-x:auto;">
+
+	
+	
+
+
+
+	
+<table width="100%" height="85" cellpadding="1"  style="width:100%;">
+	<tbody>
+		<tr>
+			<td width="190.8" height="50"><img id="specialimg" src="/img/pixle.png" width="100px" height="100px" alt=""></img></td>
+		  <td width="671.6"></td>
+		</tr>
+	   <tr>	
+		<td><div id="specialization" class="h1"></td></tr>
+		<tr><td>
+			<div id="gearscore" class="h2"></div>
+			<div id="level_pve" class="h2"></div></td>
+	
+	  </tr>	
+	  <tr>
+		<td width="20%"><div id="totaltime" class="h2"></div></td>
+		<td><div id="level_dz" class="h2"></div></td>
+
+
+	  </tr>
+		<tr>
+		<td><div id="kills_npc" class="h2"></div></td>
+		<td><div id="kills_pvp" class="h2"></div></td>
+			
+		</tr>
+	</tbody>
+</table>
+	
+	
+	
+</div>
+	
+<script type="text/javascript">
+
+$(document).ready(function() {
+  function loadstats(){
+    $.ajax({
+      type: "get",
+      url: "https://thedivisiontab.com/api/player.php?pid=" + pid,
+      cache: false,
+      dataType: "json",
+      success: function(data) {
+        console.log("Hey, I am alive");
+        $(window).resize(function() {
+    // do your stuff here
+
+    checkWidth();
+});    
+        if (data.specialization === "survivalist"){
+		  $("#level_pve").hide();
+		  $("img").attr({
+			  src: "img/td2survivalist.png",
+			  alt: data.specialization
+		  });
+		  $( "#specialimg" ).text( $( "img" ).attr( "alt" ) );
+		  $(".container").find("#specialization").text(data.specialization);
+          $(".container").find("#gearscore").text('Gear Score | '+ data.gearscore);
+		  $(".container").find("#level_dz").text('DZ Level | '+ data.level_dz);
+		 $(".container").find("#kills_pvp").text('DZ Kills | '+ data.kills_pvp);
+		  $(".container").find("#kills_npc").text('NPC Kills | '+ data.kills_npc);
+          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(data.timeplayed_total)) + "Hours";
+
+        } else if (data.specialization === "demolitionist"){
+		  $("#level_pve").hide();
+		  $("#specialimg").attr("src","img/td2demolitionist.png");
+          $(".container").find("#specialization").text('Specialization | '+ data.specialization);
+          $(".container").find("#gearscore").text('Gear Score | '+ data.gearscore);
+		  $(".container").find("#level_dz").text('DZ Level | '+ data.level_dz);
+		  $(".container").find("#kills_pvp").text('DZ Kills | '+ data.kills_pvp);
+		  $(".container").find("#kills_npc").text('NPC Kills | '+ data.kills_npc);
+          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(data.timeplayed_total)) + "Hours";
+
+        } else if (data.specialization === "sharpshooter"){
+		  $("#level_pve").hide();
+		  $("#specialimg").attr("src","img/td2sharpshooter.png");
+		  $(".container").find("#specialization").text(" " + data.specialization);
+          $(".container").find("#gearscore").text('Gear Score | '+ data.gearscore);
+		  $(".container").find("#level_dz").text('DZ Level | '+ data.level_dz);
+		  $(".container").find("#kills_pvp").text('DZ Kills | '+ data.kills_pvp);
+		  $(".container").find("#kills_npc").text('NPC Kills | '+ data.kills_npc);
+          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(data.timeplayed_total)) + "Hours";
+              
+        } else if (data.specialization === "") {
+		  $("#specialimg").hide();
+		  $("#specialization").hide();
+		  $("#gearscore").hide();
+		  $(".container").find("#level_dz").text('DZ Level | '+ data.level_dz);
+		  $(".container").find("#kills_pvp").text('DZ Kills | '+ data.kills_pvp);
+		  $(".container").find("#kills_npc").text('NPC Kills | '+ data.kills_npc);
+          $(".container").find("#level_pve").text('PvE Level | '+ data.level_pve);
+          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(data.timeplayed_total)) + "Hours";
+        }
+      }
+    });
+  }
+loadstats();
+
+setInterval(function(){
+    loadstats() // this will run after every 90 seconds
+}, 60000);
+  });
+// Convert Seconds to H:M:S
+function secondsTimeSpanToHMS(s) {
+    var h = Math.floor(s/3600); //Get whole hours
+    s -= h*3600;
+    var m = Math.floor(s/60); //Get remaining minutes
+    s -= m*60;
+    return h + " Hours"; //Return Hours
+}
+  	</script>	
+	
+	
+  </body>
+</html>

@@ -1,0 +1,18 @@
+/* ----------------------------------------------
+/* ----------------------------------------------
+.focus-in-expand-fwd
+ * ---------------------------------------------- */
+
+@-webkit-keyframes focus-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-800px);transform:translateZ(-800px);-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes focus-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-800px);transform:translateZ(-800px);-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+
+/* ----------------------------------------------
+.blur-out-contract
+ * ---------------------------------------------- */
+
+@-webkit-keyframes blur-out-contract{0%{-webkit-filter:blur(.01);filter:blur(.01)}100%{letter-spacing:-.5em;-webkit-filter:blur(12px) opacity(0);filter:blur(12px) opacity(0)}}@keyframes blur-out-contract{0%{-webkit-filter:blur(.01);filter:blur(.01)}100%{letter-spacing:-.5em;-webkit-filter:blur(12px) opacity(0);filter:blur(12px) opacity(0)}}
+
+/* ----------------------------------------------
+.blur-out-contract, 30s delay
+ * ---------------------------------------------- */
+
+@keyframes blur-out-contract{0%{filter:blur(.01)}100%{letter-spacing:-.5em;filter:blur(12px) opacity(0)}}
