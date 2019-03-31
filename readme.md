@@ -38,7 +38,7 @@ Every 10 minutes the overlay will reach out to the API and check for updates bef
  - [ ] Easier to change stats via config file
  - [ ] Better layout/graphics
  - [ ] Animations - Using Greensock or Animate.css
- - [ ] PID gathered via entering uplay name (PC) in URL
+ - [x] PID gathered via entering uplay name (PC) in URL
 
 ## Licence
 
