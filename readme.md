@@ -15,7 +15,9 @@ This overlay will allow for stats like;
 ## Requirements
  - You will need a **Web Server** 
 >  **xampp** - Own PC/Server
+>
 >  **Google Cloud** - Normally have $200 of free credit which last a year
+>
 >  **A Cheap VPS/Web Host** - Look around  *Nothing powerful is needed*
 
 ## Setup
