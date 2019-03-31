@@ -1,3 +1,5 @@
+/// Optional
+
 // Uplay/PSN/XBL Username
 var username = ""
 //Platform [uplay/xbl/psn]

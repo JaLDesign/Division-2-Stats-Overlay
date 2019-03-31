@@ -58,16 +58,30 @@ $(document).ready(function() {
       cache: false,
       dataType: "json",
       success: function(divtab) {
-        console.log("I see you, Grabbed PID: " + divtab.results[0].pid);
+        if(divtab.totalresults === 0){
+	  console.error("Fuck")
+		 $("img").attr({
+			  src: "img/JalBated.png",
+			  alt: "Whoops"
+		});
+		$( "#specialimg" ).text( $( "img" ).attr( "alt" ) );			
+		$(".container").find("#specialization").text("Something went wrong");
+		$(".container").find("#gearscore").text("Please check your username and platform");
+	    }else if (divtab.totalresults === 1){
 		$('#pid').data('GetPID', divtab.results[0].pid);
+		console.log("I see you, Grabbed PID: " + divtab.results[0].pid);
+		loadstats();	
+		}
 	  },
 	  complete: function(foundit) {
-		loadstats();
+
+		
 	}
 	});
   }	
 	
   function loadstats(){
+
     $.ajax({
       type: "get",
       url: "https://thedivisiontab.com/api/player.php?pid=" + $('#pid').data('GetPID'),

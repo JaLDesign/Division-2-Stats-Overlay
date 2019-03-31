@@ -34,7 +34,7 @@ Left; My Account | Center: Friends account with different Specialization | Right
 - Save & move/upload your files to your web server.
 - Check Usage
 
-- *Hosted: Soon*
+- *Hosted: https://jalp.xyz/div2stats/?username=[username]&platform=[platform]*
 
  **Hard Way - /config/config.json**;
  - Open the config  folder and open **config.json**

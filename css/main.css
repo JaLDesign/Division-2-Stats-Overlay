@@ -7,71 +7,42 @@
 body {
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   font-size: 1.5vw;
-	text-shadow: 0px 0px 3px #000000;
 	color: #ffffff;
 	line-height: auto;
 	padding-left: 5;
 	text-transform: capitalize;
-    background: #484848;
   }
 
 .h1 {
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   font-size: 4vw;
-	text-shadow: 0px 0px 3px #000000;
-	color: #ffffff;
-	line-height:auto;			
+  -webkit-filter: drop-shadow(2px 0px .px #000000);
+  filter: drop-shadow(2px 0px 3px #000000);
+	stroke: black;
+  color: #ffffff;
+  line-height:auto;			
 }
 
 .h2 {
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   font-size: 3vw;
-	text-shadow: 0px 0px 3px #000000;
+  -webkit-filter: drop-shadow(2px 0px 3px #000000);
+  filter: drop-shadow(2px 0px 3px #000000);
+	stroke: black;
 	color: #ffffff;
 	line-height:auto;			
 }
 
-
-#resp-table {
-width: 100%;
-display: table;
+img {
+  -webkit-filter: drop-shadow(2px 0px 5px #000000);
+  filter: drop-shadow(2px 0px 3px #000000);
 }
 
-#resp-table-caption{
-display: table-caption;
-text-align: center;
-font-size: 30px;
-font-weight: bold;
-}
-#resp-table-header{
-display: table-header-group;
-background-color: gray;
-font-weight: bold;
-font-size: 25px;
-}.table-header-cell{
-display: table-cell;
-padding: 10px;
-text-align: justify;
-border-bottom: 1px solid black;
-}
-#resp-table-body{
-display: table-row-group;
-}
-.resp-table-row{
-display: table-row;
-}
-.table-body-cell{
-display: table-cell;
-}
-#resp-table-footer {
-display: table-footer-group;
-background-color: gray;
-font-weight: bold;
-font-size: 25px;
-color: rgba(255, 255, 255, 0.45);
-}.table-footer-cell{
-display: table-cell;
-padding: 10px;
-text-align: justify;
-border-bottom: 1px solid black;
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    -webkit-border-horizontal-spacing: 2px;
+    -webkit-border-vertical-spacing: 2px;
+    border-color: transparent;
 }
