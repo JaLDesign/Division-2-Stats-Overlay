@@ -23,7 +23,7 @@ This overlay will allow for stats like;
 ## Setup
  **/config/config.json**;
  - Open the config  folder and open **config.json**
-    - Replace **[name]** with your **uplay**|**xbl**|**psn** and change platform  respectively name.
+    - Replace **[name]** with your **uplay**|**xbl**|**psn** username and change **[platform]** with the respectively name.
     - Save & move/upload your files to your web server.
 ## Usage
  - Navigate to where ever you placed the file on your web directory
