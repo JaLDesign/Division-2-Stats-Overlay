@@ -36,7 +36,7 @@ This overlay will allow for stats like;
    **[Server ip]/d2stats** or **localhost/d2stats/**  
 - In OBS create a new Browser Source set the URL like above.
     - Max Width & Height 1920x400
-    - Min Width & Height 800x400
+    - Min Width & Height 800x250
    
 Every 10 minutes the overlay will reach out to the API and check for updates before been displayed.
 *Please note, that it can sometimes take up to a hour for api data to refresh. This is something that has been brought up on [The Division Tab Github Page](https://github.com/Tabwire/TheDivisionTab-API/issues/3)
