@@ -34,7 +34,7 @@ This overlay will allow for stats like;
    **[Server ip]/d2stats** or **localhost/d2stats/**
    
 Every 10 minutes the overlay will reach out to the API and check for updates before been displayed.
-*Please note, that it can sometimes take up to a hour for api data to refresh. This is something that has been brought up on [The Division Tab Github Page](https://github.com/Tabwire/TheDivisionTab-API/issues/5)
+*Please note, that it can sometimes take up to a hour for api data to refresh. This is something that has been brought up on [The Division Tab Github Page](https://github.com/Tabwire/TheDivisionTab-API/issues/3)
 ## To Doa
  - [ ] Easier to change stats via config file
  - [ ] Better layout/graphics
