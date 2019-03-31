@@ -48,72 +48,84 @@
 	
 	
 </div>
-	
-<script type="text/javascript">
-
+<div id="pid"></div>	
+<script type="text/javascript"> 
 $(document).ready(function() {
+
+  function getpid(){
+    $.ajax({
+      type: "get",
+      url: "https://thedivisiontab.com/api/search.php?name=" + username + "&platform=" + platform,
+      cache: false,
+      dataType: "json",
+      success: function(divtab) {
+        console.log("Hey, I am alive", divtab.results[0].pid);
+		$('#pid').data('GetPID', divtab.results[0].pid);
+	  },
+	  complete: function(foundit) {
+		loadstats();
+	}
+	});
+  }	
+	
   function loadstats(){
     $.ajax({
       type: "get",
-      url: "https://thedivisiontab.com/api/player.php?pid=" + pid,
+      url: "https://thedivisiontab.com/api/player.php?pid=" + $('#pid').data('GetPID'),
       cache: false,
       dataType: "json",
-      success: function(data) {
+      success: function(d2stats) {
         console.log("Hey, I am alive");
-        $(window).resize(function() {
-    // do your stuff here
-
-    checkWidth();
-});    
-        if (data.specialization === "survivalist"){
+ 
+        if (d2stats.specialization === "survivalist"){
 		  $("#level_pve").hide();
 		  $("img").attr({
 			  src: "img/td2survivalist.png",
-			  alt: data.specialization
+			  alt: d2stats.specialization
 		  });
 		  $( "#specialimg" ).text( $( "img" ).attr( "alt" ) );
-		  $(".container").find("#specialization").text(data.specialization);
-          $(".container").find("#gearscore").text('Gear Score | '+ data.gearscore);
-		  $(".container").find("#level_dz").text('DZ Level | '+ data.level_dz);
-		 $(".container").find("#kills_pvp").text('DZ Kills | '+ data.kills_pvp);
-		  $(".container").find("#kills_npc").text('NPC Kills | '+ data.kills_npc);
-          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(data.timeplayed_total)) + "Hours";
+		  $(".container").find("#specialization").text(d2stats.specialization);
+          $(".container").find("#gearscore").text('Gear Score | '+ d2stats.gearscore);
+		  $(".container").find("#level_dz").text('DZ Level | '+ d2stats.level_dz);
+		 $(".container").find("#kills_pvp").text('DZ Kills | '+ d2stats.kills_pvp);
+		  $(".container").find("#kills_npc").text('NPC Kills | '+ d2stats.kills_npc);
+          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(d2stats.timeplayed_total)) + "Hours";
 
-        } else if (data.specialization === "demolitionist"){
+        } else if (d2stats.specialization === "demolitionist"){
 		  $("#level_pve").hide();
 		  $("#specialimg").attr("src","img/td2demolitionist.png");
-          $(".container").find("#specialization").text('Specialization | '+ data.specialization);
-          $(".container").find("#gearscore").text('Gear Score | '+ data.gearscore);
-		  $(".container").find("#level_dz").text('DZ Level | '+ data.level_dz);
-		  $(".container").find("#kills_pvp").text('DZ Kills | '+ data.kills_pvp);
-		  $(".container").find("#kills_npc").text('NPC Kills | '+ data.kills_npc);
-          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(data.timeplayed_total)) + "Hours";
+          $(".container").find("#specialization").text('Specialization | '+ d2stats.specialization);
+          $(".container").find("#gearscore").text('Gear Score | '+ d2stats.gearscore);
+		  $(".container").find("#level_dz").text('DZ Level | '+ d2stats.level_dz);
+		  $(".container").find("#kills_pvp").text('DZ Kills | '+ d2stats.kills_pvp);
+		  $(".container").find("#kills_npc").text('NPC Kills | '+ d2stats.kills_npc);
+          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(d2stats.timeplayed_total)) + "Hours";
 
-        } else if (data.specialization === "sharpshooter"){
+        } else if (d2stats.specialization === "sharpshooter"){
 		  $("#level_pve").hide();
 		  $("#specialimg").attr("src","img/td2sharpshooter.png");
-		  $(".container").find("#specialization").text(" " + data.specialization);
-          $(".container").find("#gearscore").text('Gear Score | '+ data.gearscore);
-		  $(".container").find("#level_dz").text('DZ Level | '+ data.level_dz);
-		  $(".container").find("#kills_pvp").text('DZ Kills | '+ data.kills_pvp);
-		  $(".container").find("#kills_npc").text('NPC Kills | '+ data.kills_npc);
-          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(data.timeplayed_total)) + "Hours";
+		  $(".container").find("#specialization").text(" " + d2stats.specialization);
+          $(".container").find("#gearscore").text('Gear Score | '+ d2stats.gearscore);
+		  $(".container").find("#level_dz").text('DZ Level | '+ d2stats.level_dz);
+		  $(".container").find("#kills_pvp").text('DZ Kills | '+ d2stats.kills_pvp);
+		  $(".container").find("#kills_npc").text('NPC Kills | '+ d2stats.kills_npc);
+          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(d2stats.timeplayed_total)) + "Hours";
               
-        } else if (data.specialization === "") {
+        } else if (d2stats.specialization === "") {
 		  $("#specialimg").hide();
 		  $("#specialization").hide();
 		  $("#gearscore").hide();
-		  $(".container").find("#level_dz").text('DZ Level | '+ data.level_dz);
-		  $(".container").find("#kills_pvp").text('DZ Kills | '+ data.kills_pvp);
-		  $(".container").find("#kills_npc").text('NPC Kills | '+ data.kills_npc);
-          $(".container").find("#level_pve").text('PvE Level | '+ data.level_pve);
-          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(data.timeplayed_total)) + "Hours";
+		  $(".container").find("#level_dz").text('DZ Level | '+ d2stats.level_dz);
+		  $(".container").find("#kills_pvp").text('DZ Kills | '+ d2stats.kills_pvp);
+		  $(".container").find("#kills_npc").text('NPC Kills | '+ d2stats.kills_npc);
+          $(".container").find("#level_pve").text('PvE Level | '+ d2stats.level_pve);
+          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(d2stats.timeplayed_total)) + "Hours";
         }
-      }
+      }			
     });
   }
-loadstats();
 
+getpid();
 setInterval(function(){
     loadstats() // this will run after every 90 seconds
 }, 60000);

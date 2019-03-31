@@ -1,3 +1,4 @@
-// JavaScript Document
-
-var pid = [PID]
+// Uplay/PSN/XBL Username
+var username = "[username]"
+//Platform [uplay/xbl/psn]
+var platform = "[platform]"
