@@ -12,6 +12,7 @@ Using [@Tabwire](https://github.com/Tabwire/TheDivisionTab-API) TheDivisionTab A
 > - Specialization's with Emblem 
 > - NPC Kills
 > - DZ Kills
+> - & More!
 
 This overlay will allow for stats directly from that API.
 
