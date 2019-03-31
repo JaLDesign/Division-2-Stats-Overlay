@@ -31,8 +31,8 @@ Left; My Account | Center: Friends account with different Specialization | Right
 **Easy Way** 
 - If self-hosted: 
 - Save & move/upload your files to your web server.
-- http://localhost/?username=**[username]**&platform=**[platform]**
-	- Replace the bold brackets with your **uplay**|**xbl**|**psn** username and change the **[username]** & **[platform]** with the respective information.
+- localhost/?username=**[username]**&platform=**[platform]**
+	- Replace the brackets with your **uplay**|**xbl**|**psn** username and change the **[username]** & **[platform]** with the respective information.
 
 - *Hosted: Soon*
 
