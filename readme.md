@@ -21,16 +21,10 @@ This overlay will allow for stats like;
 >  **A Cheap VPS/Web Host** - Look around  *Nothing powerful is needed*
 
 ## Setup
- - **Your Player ID (PID)**;
-    - Replace **[name]** with your **uplay**|**xbox**|**psn** and change platform  respectively name. Then navigate to the site.
- [https://thedivisiontab.com/api/search.php?name=[name]&platform=[platform]](https://thedivisiontab.com/api/search.php?name=[name]&platform=[platform])
-     - Copy the PID string. Everything in the quotation marks 
-> If jalp_ needed is pid he would go to;
-> https://thedivisiontab.com/api/search.php?name=jalp_&platform=uplay
-> - This returns **pid:  "9d73380d-5b69-40af-a8cc-a8bcf2417093"**...
-> - You just need **"9d73380d-5b69-40af-a8cc-a8bcf2417093"**
- - With that copy and pasted, Open the config  folder and open **config.json**
- - Replace **[PID]** with the string you copied.
+ - **/config/config.json**;
+ - Open the config  folder and open **config.json**
+    - Replace **[name]** with your **uplay**|**xbl**|**psn** and change platform  respectively name.
+    - Save & move/upload your files to your web server.
 ## Usage
  - Navigate to where ever you placed the file on your web directory
    **[Server ip]/d2stats** or **localhost/d2stats/**  
@@ -47,7 +41,6 @@ Every 10 minutes the overlay will reach out to the API and check for updates bef
  - [ ] PID gathered via entering uplay name (PC) in URL
 
 ## Licence
-Please feel free to take this as a template for your own work or your own stream. Please credit all work where due.
 
 Copyright 2019 JaL Design
 
