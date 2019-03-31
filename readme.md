@@ -31,8 +31,7 @@ Left; My Account | Center: Friends account with different Specialization | Right
 **Easy Way** 
 - If self-hosted: 
 - Save & move/upload your files to your web server.
-- localhost/?username=**[username]**&platform=**[platform]**
-	- Replace the brackets with your **uplay**|**xbl**|**psn** username and change the **[username]** & **[platform]** with the respective information.
+- Check Usage
 
 - *Hosted: Soon*
 
@@ -43,7 +42,8 @@ Left; My Account | Center: Friends account with different Specialization | Right
 ## Usage
  - Navigate to where ever you placed the files on your web directory 
  *Its recommend that you create a new sub directory/folder outside of www/htdocs in the case of this example* **/d2stats**
-    -**[Server ip]/d2stats** or **localhost/d2stats/**  
+    -**[Server ip]/d2stats** or **localhost/d2stats/?username=[username]&platform=[platform]**
+	- Replace the brackets with your **uplay**|**xbl**|**psn** username and change the **[username]** & **[platform]** with the respective information.
 - In OBS create a new Browser Source set the URL like above.
     - Max Width & Height 1920x400
     - Min Width & Height 800x250
