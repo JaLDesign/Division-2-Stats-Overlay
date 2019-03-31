@@ -1,5 +1,6 @@
 
 
+
 # Division 2 Stat Overlay
 Using [Tabwire/TheDivisionTab-API](https://github.com/Tabwire/TheDivisionTab-API) a unoffical api for The Division 2 and allows for 
 This overlay will allow for stats like;
@@ -26,7 +27,16 @@ Left; My Account | Center: Friends account with different Specialization | Right
 >  **A Cheap VPS/Web Host** - Look around  *Nothing powerful is needed*
 
 ## Setup
- **/config/config.json**;
+
+**Easy Way** 
+- If self-hosted: 
+- Save & move/upload your files to your web server.
+- http://localhost/?username=**[username]**&platform=**[platform]**
+	- Replace the bold brackets with your **uplay**|**xbl**|**psn** username and change the **[username]** & **[platform]** with the respective information.
+
+- *Hosted: Soon*
+
+ **Hard Way - /config/config.json**;
  - Open the config  folder and open **config.json**
     - Replace **[name]** with your **uplay**|**xbl**|**psn** username and change **[platform]** with the respective name.
     - Save & move/upload your files to your web server.
