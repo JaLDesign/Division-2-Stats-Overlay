@@ -21,7 +21,7 @@ This overlay will allow for stats like;
 >  **A Cheap VPS/Web Host** - Look around  *Nothing powerful is needed*
 
 ## Setup
- - **/config/config.json**;
+ **/config/config.json**;
  - Open the config  folder and open **config.json**
     - Replace **[name]** with your **uplay**|**xbl**|**psn** and change platform  respectively name.
     - Save & move/upload your files to your web server.
