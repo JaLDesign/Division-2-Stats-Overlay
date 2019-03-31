@@ -33,11 +33,14 @@ This overlay will allow for stats like;
  - Replace **[PID]** with the string you copied.
 ## Usage
  - Navigate to where ever you placed the file on your web directory
-   **[Server ip]/d2stats** or **localhost/d2stats/**
+   **[Server ip]/d2stats** or **localhost/d2stats/**  
+- In OBS create a new Browser Source set the URL like above.
+    - Max Width & Height 1920x400
+    - Min Width & Height 800x400
    
 Every 10 minutes the overlay will reach out to the API and check for updates before been displayed.
 *Please note, that it can sometimes take up to a hour for api data to refresh. This is something that has been brought up on [The Division Tab Github Page](https://github.com/Tabwire/TheDivisionTab-API/issues/3)
-## To Doa
+## To Do
  - [ ] Easier to change stats via config file
  - [ ] Better layout/graphics
  - [ ] Animations - Using Greensock or Animate.css
