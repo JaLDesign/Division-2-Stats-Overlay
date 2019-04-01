@@ -3,8 +3,6 @@
 **[Setup](#setup) | [Usage](#usage) | [Licence](#licence)**
 
 
-**[JaLP_ Twitter](https://twitter.com/jalp_) | [JaLP Twitch](https://twitch.tv/jalp)** *...Shameless Plug*
-
 Using [@Tabwire](https://github.com/Tabwire/TheDivisionTab-API) TheDivisionTab API a unoffical api for The Division 2 and allows for;
 
 > - Total Time
@@ -24,6 +22,8 @@ Because you can ping off the API it allows for emblems for Specialization's to c
 ## Examples in use
 ![examples](https://i.imgur.com/aQJy6jr.png)
 Left; My Account | Center: Friends account with different Specialization | Right: Friend with No Skill Score Yet
+![Screenshot from OBS Capture](https://i.imgur.com/SzQHxIE.png)
+
 ## Requirements
  - You will need a **Web Server** 
 >  **xampp** - Own PC/Server
