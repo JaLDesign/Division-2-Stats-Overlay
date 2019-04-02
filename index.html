@@ -1,174 +1,43 @@
 <html>
 <head>
 	<meta charset="UTF-8">
- 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
-
-	<script src="config/config.json"></script>
-</head>
-<body>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/main.css" rel="stylesheet" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	  
-	  
+</head>
+<body> 
 <div class="container" style="overflow-x:auto;">
-
-	
-	
-
-
-
-	
 <table width="100%" height="85" cellpadding="1"  style="width:100%;">
 	<tbody>
 		<tr>
 			<td width="190.8" height="50"><img id="specialimg" src="img/pixle.png" width="100px" height="100px" alt=""></img></td>
-		  <td width="671.6"></td>
+			<td width="671.6"></td>
 		</tr>
-	   <tr>	
+	   	<tr>	
 		<td><div id="specialization" class="h1"></td></tr>
-		<tr><td>
-			<div id="gearscore" class="h2"></div>
-			<div id="level_pve" class="h1"></div></td>
-	
-	  </tr>	
-	  <tr>
-		<td width="20%"><div id="totaltime" class="h2"></div></td>
-		<td><div id="level_dz" class="h2"></div></td>
-
-
-	  </tr>
 		<tr>
-		<td><div id="kills_npc" class="h2"></div></td>
-		<td><div id="kills_pvp" class="h2"></div></td>
+			<td>
+			<div id="gearscore" class="h2"></div>
+			<div id="level_pve" class="h1"></div>
+			</td>
+	
+	  	</tr>	
+	  	<tr>
+			<td width="20%"><div id="totaltime" class="h2"></div></td>
+			<td><div id="level_dz" class="h2"></div></td>
+	  	</tr>
+	  	<tr>
+			<td><div id="kills_npc" class="h2"></div></td>
+			<td><div id="kills_pvp" class="h2"></div></td>
 			
-		</tr>
-	</tbody>
-</table>
-	
-	
-	
+		  </tr>
+		</tbody>
+	</table>
 </div>
 <div id="pid"></div>	
-<script type="text/javascript"> 
-$(document).ready(function() {
-  function getpid(){
-    $.ajax({
-      type: "get",
-      url: "https://thedivisiontab.com/api/search.php?name=" + username + "&platform=" + platform,
-      cache: false,
-      dataType: "json",
-      success: function(divtab) {
-        if(divtab.totalresults === 0){
-	  console.error("Fuck")
-		 $("img").attr({
-			  src: "img/JalBated.png",
-			  alt: "Whoops"
-		});
-		$( "#specialimg" ).text( $( "img" ).attr( "alt" ) );			
-		$(".container").find("#specialization").text("Something went wrong");
-		$(".container").find("#gearscore").text("Please check your username and platform");
-	    }else if (divtab.totalresults === 1){
-		$('#pid').data('GetPID', divtab.results[0].pid);
-		console.log("I see you, Grabbed PID: " + divtab.results[0].pid);
-		loadstats();	
-		}
-	  },
-	  complete: function(foundit) {
-
-		
-	}
-	});
-  }	
-	
-  function loadstats(){
-
-    $.ajax({
-      type: "get",
-      url: "https://thedivisiontab.com/api/player.php?pid=" + $('#pid').data('GetPID'),
-      cache: false,
-      dataType: "json",
-      success: function(d2stats) {
-        console.log("Hey, I am alive");
- 
-        if (d2stats.specialization === "survivalist"){
-		  $("#level_pve").hide();
-		  $("img").attr({
-			  src: "img/td2survivalist.png",
-			  alt: d2stats.specialization
-		  });
-		  $( "#specialimg" ).text( $( "img" ).attr( "alt" ) );
-		  $(".container").find("#specialization").text(d2stats.specialization);
-          $(".container").find("#gearscore").text('Gear Score | '+ d2stats.gearscore);
-		  $(".container").find("#level_dz").text('DZ Level | '+ d2stats.level_dz);
-		 $(".container").find("#kills_pvp").text('DZ Kills | '+ d2stats.kills_pvp);
-		  $(".container").find("#kills_npc").text('NPC Kills | '+ d2stats.kills_npc);
-          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(d2stats.timeplayed_total)) + "Hours";
-
-        } else if (d2stats.specialization === "demolitionist"){
-		  $("#level_pve").hide();
-		  $("#specialimg").attr("src","img/td2demolitionist.png");
-          $(".container").find("#specialization").text('Specialization | '+ d2stats.specialization);
-          $(".container").find("#gearscore").text('Gear Score | '+ d2stats.gearscore);
-		  $(".container").find("#level_dz").text('DZ Level | '+ d2stats.level_dz);
-		  $(".container").find("#kills_pvp").text('DZ Kills | '+ d2stats.kills_pvp);
-		  $(".container").find("#kills_npc").text('NPC Kills | '+ d2stats.kills_npc);
-          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(d2stats.timeplayed_total)) + "Hours";
-
-        } else if (d2stats.specialization === "sharpshooter"){
-		  $("#level_pve").hide();
-		  $("#specialimg").attr("src","img/td2sharpshooter.png");
-		  $(".container").find("#specialization").text(" " + d2stats.specialization);
-          $(".container").find("#gearscore").text('Gear Score | '+ d2stats.gearscore);
-		  $(".container").find("#level_dz").text('DZ Level | '+ d2stats.level_dz);
-		  $(".container").find("#kills_pvp").text('DZ Kills | '+ d2stats.kills_pvp);
-		  $(".container").find("#kills_npc").text('NPC Kills | '+ d2stats.kills_npc);
-          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(d2stats.timeplayed_total)) + "Hours";
-              
-        } else if (d2stats.specialization === "") {
-		  $("#specialimg").hide();
-		  $("#specialization").hide();
-		  $("#gearscore").hide();
-		  $(".container").find("#level_dz").text('DZ Level | '+ d2stats.level_dz);
-		  $(".container").find("#kills_pvp").text('DZ Kills | '+ d2stats.kills_pvp);
-		  $(".container").find("#kills_npc").text('NPC Kills | '+ d2stats.kills_npc);
-          $(".container").find("#level_pve").text('PvE Level | '+ d2stats.level_pve);
-          $(".container").find("#totaltime").text('🕒 '+  secondsTimeSpanToHMS(d2stats.timeplayed_total)) + "Hours";
-        }
-      }			
-    });
-  }
-
-getpid();
-setInterval(function(){
-    loadstats() // this will run after every 60 seconds
-}, 600000);
-  });
-// Convert Seconds to H:M:S
-function secondsTimeSpanToHMS(s) {
-    var h = Math.floor(s/3600); //Get whole hours
-    s -= h*3600;
-    var m = Math.floor(s/60); //Get remaining minutes
-    s -= m*60;
-    return h + " Hours"; //Return Hours
-}
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = window.location.search.substring(1),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-        }
-    }
-};	
-var username = getUrlParameter('username');
-var platform = getUrlParameter('platform');	
-  	</script>	
-	
-	
   </body>
+
+<script src="config/config.json"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
 </html>
