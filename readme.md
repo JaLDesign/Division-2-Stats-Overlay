@@ -40,7 +40,7 @@ Left; My Account | Center: Friends account with different Specialization | Right
 >[Follow usage for browser sizes etc](#usage)
 
 ### Self-hosted: 
->Download the [latest master release here](https://github.com/JaLDesign/Division-2-Stats-Overlay/archive/master.zip) (recommended)
+>Download the [latest release here](https://github.com/JaLDesign/Division-2-Stats-Overlay/releases) (recommended)
 >Save & move/upload your files to your web server.
 >- *Its recommend that you create a new sub directory/folder outside of www/htdocs in the case of this example* **/d2stats**
  
