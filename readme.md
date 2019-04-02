@@ -24,14 +24,6 @@ Because you can ping off the API it allows for emblems for Specialization's to c
 Left; My Account | Center: Friends account with different Specialization | Right: Friend with No Skill Score Yet
 ![Screenshot from OBS Capture](https://i.imgur.com/SzQHxIE.png)
 
-## Requirements
- - You will need a **Web Server** 
->  **xampp** - Own PC/Server
->
->  **Google Cloud** - Normally have $200 of free credit which last a year
->
->  **A Cheap VPS/Web Host** - Look around  *Nothing powerful is needed*
-
 ## [Setup](#setup)
 
 **Easy Way**
@@ -44,6 +36,15 @@ Left; My Account | Center: Friends account with different Specialization | Right
 >Save & move/upload your files to your web server.
 >- *Its recommend that you create a new sub directory/folder outside of www/htdocs in the case of this example* **/d2stats**
  
+### Requirements for Self-Hosted
+
+> You will need a **Web Server;** 
+
+>  **xampp** - Own PC/Server
+
+>  **Google Cloud** - Normally have $200 of free credit which last a year
+
+>  **A Cheap VPS/Web Host** - Look around  *Nothing powerful is needed* 
 
 ## [Usage](#usage)
 
