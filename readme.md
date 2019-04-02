@@ -12,6 +12,7 @@ Using [@Tabwire](https://github.com/Tabwire/TheDivisionTab-API) TheDivisionTab A
 > - Specialization's with Emblem 
 > - NPC Kills
 > - DZ Kills
+> - & More!
 
 This overlay will allow for stats directly from that API.
 
@@ -21,6 +22,8 @@ Because you can ping off the API it allows for emblems for Specialization's to c
 ## Examples in use
 ![examples](https://i.imgur.com/aQJy6jr.png)
 Left; My Account | Center: Friends account with different Specialization | Right: Friend with No Skill Score Yet
+![Screenshot from OBS Capture](https://i.imgur.com/SzQHxIE.png)
+
 ## Requirements
  - You will need a **Web Server** 
 >  **xampp** - Own PC/Server
