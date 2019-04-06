@@ -96,7 +96,7 @@ function storystats(d2stats) {
     $("#specialization").hide();
     $("#gearscore").hide();
     $(".container").find("#level_dz").text('DZ Level | ' + d2stats.level_dz);
-    $(".container").find("#kills_pvp").text('DZ Kills | ' + d2stats.kills_pvp);
+    $(".container").find("#kills_pvp").text('PvP Kills | ' + d2stats.kills_pvp);
     $(".container").find("#kills_npc").text('NPC Kills | ' + d2stats.kills_npc);
     $(".container").find("#level_pve").text('PvE Level | ' + d2stats.level_pve);
     $(".container").find("#totaltime").text('🕒 ' + secondsTimeSpanToH(d2stats.timeplayed_total)) + "Hours";
