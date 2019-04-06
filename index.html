@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title>Division 2 Stat Overlay</title>
-    <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="css/animate.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<meta charset="UTF-8">
+	<title>Division 2 Stat Overlay</title>
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+	<link href="favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 </head>
-
 <body>
-    <div class="container" style="overflow-x:auto;">
-        <table width="100%" height="85" cellpadding="1" style="width:100%;" class="animated fadeIn delay-2s">
-            <tbody>
-                <tr>
-                    <td width="350" height="50"><img src="img/pixle.png" class="specialimg" width="75px" height="75px" alt=""></img></td>
-                    <td width="1786"><div id="totaltime" class="h2"></div>
-		
-		
-		</td>
-                </tr>
-                <tr>
-                    <td class="h2"><div id="specialization">
-					
-                </tr>
-                <tr>
-
-                </tr>
-                <tr>
-                    <td class="h2">
+	<div class="container" style="overflow-x:auto;">
+		<table cellpadding="1" class="animated fadeIn delay-2s" style="width:100%;" width="100%">
+			<tbody>
+				<tr>
+					<td height="50" width="264"><img alt="" class="specialimg" height="75px" src="img/pixle.png" width="75px"></td>
+					<td width="228">
+						<div class="h2" id="totaltime"></div>
+					</td>
+					<td width="1053"></td>
+				</tr>
+				<tr>
+					<td class="h2">
+						<div id="specialization"></div>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="h2">
 						<div id="level_pve"></div>
 						<div id="gearscore"></div>
 					</td>
-                        
-                    </td>
-                    <td>
-                        <div id="level_dz" class="h2"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="kills_npc" class="h2"></div>
-                    </td>
-                    <td>
-                        <div id="kills_pvp" class="h2"></div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div id="pid"></div>
+					<td>
+						<div class="h2" id="level_dz"></div>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<div class="h2" id="kills_npc"></div>
+					</td>
+					<td>
+						<div class="h2" id="kills_pvp"></div>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="pid"></div>
 	<div id="time"></div>
+	<script src="config/config.json">
+	</script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script> 
+	<script src="js/main.js">
+	</script>
 </body>
-
-<script src="config/config.json"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/main.js"></script>
-
 </html>

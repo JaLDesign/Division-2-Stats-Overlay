@@ -17,8 +17,7 @@ body {
     -webkit-filter: drop-shadow(2px 0px .px #000000);
     filter: drop-shadow(2px 0px 3px #000000);
     stroke: black;
-	text-align: left
-    color: #ffffff;
+    text-align: left color: #ffffff;
     line-height: auto;
 }
 
