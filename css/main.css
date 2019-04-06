@@ -1,41 +1,50 @@
 @charset "utf-8";
 
 
-@media (max-width: 1920px){
-}
+@media (max-width: 1920px) {}
 
 body {
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  font-size: 1.5vw;
-	color: #ffffff;
-	line-height: auto;
-	padding-left: 5;
-	text-transform: capitalize;
-  }
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    color: #ffffff;
+    line-height: auto;
+    padding-left: 5;
+    text-transform: capitalize;
+}
 
 .h1 {
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  font-size: 4vw;
-  -webkit-filter: drop-shadow(2px 0px .px #000000);
-  filter: drop-shadow(2px 0px 3px #000000);
-	stroke: black;
-  color: #ffffff;
-  line-height:auto;			
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 4vw;
+    -webkit-filter: drop-shadow(2px 0px .px #000000);
+    filter: drop-shadow(2px 0px 3px #000000);
+    stroke: black;
+	text-align: left
+    color: #ffffff;
+    line-height: auto;
 }
 
 .h2 {
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  font-size: 3vw;
-  -webkit-filter: drop-shadow(2px 0px 3px #000000);
-  filter: drop-shadow(2px 0px 3px #000000);
-	stroke: black;
-	color: #ffffff;
-	line-height:auto;			
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 2.5vw;
+    -webkit-filter: drop-shadow(2px 0px 3px #000000);
+    filter: drop-shadow(2px 0px 3px #000000);
+    stroke: black;
+    color: #ffffff;
+    line-height: auto;
+}
+
+.h3 {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 1.75vw;
+    -webkit-filter: drop-shadow(2px 0px 3px #000000);
+    filter: drop-shadow(2px 0px 3px #000000);
+    stroke: black;
+    color: #ffffff;
+    line-height: auto;
 }
 
 img {
-  -webkit-filter: drop-shadow(2px 0px 5px #000000);
-  filter: drop-shadow(2px 0px 3px #000000);
+    -webkit-filter: drop-shadow(2px 0px 5px #000000);
+    filter: drop-shadow(2px 0px 3px #000000);
 }
 
 table {
