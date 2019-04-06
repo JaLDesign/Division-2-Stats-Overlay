@@ -93,7 +93,6 @@ function endgamestats(d2stats) {
 
 function storystats(d2stats) {
     $("#specialimg").hide();
-    $("#specialization").hide();
     $("#gearscore").hide();
     $(".container").find("#level_dz").text('DZ Level | ' + d2stats.level_dz);
     $(".container").find("#kills_pvp").text('PvP Kills | ' + d2stats.kills_pvp);
@@ -127,4 +126,3 @@ function secondsTimeSpanToH(s) {
     s -= m * 60;
 	return h + " Hours ";
 }
-
