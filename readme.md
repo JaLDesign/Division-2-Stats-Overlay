@@ -20,7 +20,7 @@ Because you can ping off the API it allows for emblems for Specialization's to c
 
 
 ## Examples in use
-![examples](https://i.imgur.com/aQJy6jr.png)
+![examples](https://i.imgur.com/n09Dsf3.gif)
 Left; My Account | Center: Friends account with different Specialization | Right: Friend with No Skill Score Yet
 ![Screenshot from OBS Capture](https://i.imgur.com/SzQHxIE.png)
 
