@@ -1,3 +1,5 @@
+# DEPRECATED - No longer updating. Please feel free to fork and update
+
 # Division 2 Stat Overlay
 
 **[Setup](#setup) | [Usage](#usage) | [Licence](#licence)**
